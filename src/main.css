@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: block;
+    overflow: hidden;
+}
+
+.movies-filter {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background: #333;
+}
+
+.movies-filter .input-group {
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+
+.grid.layout {
+    position: fixed;
+    width: 100%;
+    top: 80px;
+    display: block;
+    height: calc(100% - 80px);
+    padding-bottom: 20px;
+    background: #aaa;
+    overflow-y: scroll;
+}
+
+.noimage {
+    width: 100%;
+    min-height: 300px;
+    background-color: #eee;
+    background-image: url(./noimage.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.movie {
+    margin-top: 20px;
+    font-size: 80%;
+}
+
+.movie .card-title {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.movie .genres {
+    font-size: 80%;
+    float: right;
+    color: #888;
+    clear: both;
+    font-style: italic;
+}
+
+.movie .about .plot {
+    min-height: 110px;
+}
+
+.movie .about {
+    float: right;
+    color: #888;
+    clear: both;
+    font-style: italic;
+}
+
+.movie .actors::before {
+    content: ' Actors: ';
+    font-weight: bold;
+}
+
+.movie .actors {
+    width: 100%;
+    font-size: 80%;
+}
+
+.movie .runtime {
+    color: #888;
+    float: left;
+    text-align: left;
+    width: 50%;
+    font-size: 90%;
+    margin-bottom: 7px;
+}
+
+.movie .sp-info .row {
+    clear: both;
+    width: 100%;
+    height: 30px;
+    display: block;
+}
+
+.movie .card-footer .row {
+    clear: both;
+    width: 100%;
+    height: 35px;
+    display: block;
+}
+
+.movie .director {
+    color: #212;
+    float: right;
+    text-align: right;
+    width: 50%;
+    font-size: 90%;
+    margin-bottom: 7px;
+}
+
+.movie .runtime::before {
+    content: 'runtime: ';
+    font-size: 80%;
+}
+
+.movie .runtime::after {
+    content: ' min';
+    font-size: 80%;
+}
+
+.movie .year {
+    float: right;
+    font-size: 100%;
+    color: #955;
+    letter-spacing: 1px;
+    clear: both;
+}
+
+.movie .card-footer .btn-group {
+    width: auto;
+    margin: 15px auto;
+    clear: both;
+}
+
+.updateDialog h3 .mode {
+    font-size: 80%;
+    color: #bbb;
+    font-weight: normal;
+}
+
+.updateDialog h3 .mode::before {
+    content: '(';
+}
+
+.updateDialog h3 .mode::after {
+    content: ')';
+}
+
+.updateDialog {
+    background: #f5Ffff;
+    box-shadow: 0 0 160px -10px #bbb;
+    overflow: hidden;
+    padding: 30px 20px;
+}
+
+.cinemaRedactGroup {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px;
+    padding: 20px;
+    height: 65px;
+}
+
+.cinemaRedactGroup label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 3px;
+    float: left;
+    width: 20%;
+    font-weight: bold;
+}
+
+.cinemaRedactGroup input,
+.cinemaRedactGroup textarea,
+.cinemaRedactGroup select {
+    float: right;
+    width: 70%;
+    display: block;
+    font-size: 90%;
+    letter-spacing: 1px;
+    font-style: italic;
+    border: 1px #ccc solid;
+}
+
+.updateDialog .update,
+.updateDialog .remove,
+.updateDialog .cancel {
+    width: 28%;
+    margin: 10px 2.5%;
+}
