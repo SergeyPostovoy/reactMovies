@@ -18,6 +18,7 @@ export default (state = initialState, action) => {
             let flatIds = state.data.reduce((accumulator, movie) => accumulator.concat(movie.id), []),
                 maxId = Math.max.apply(null, flatIds)
 
+            maxId = maxId < 0 ? 0 : maxId
             emptyItem.id = maxId + 1
 
             return {
