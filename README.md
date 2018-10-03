@@ -1,6 +1,6 @@
-#React movies
+# React movies
 
-## What is it ?
+## What's in this?
 
 This is an example of the application React, 
 the solution is a Bootstrap catalog of movie maps with simple CRUD capabilities.
