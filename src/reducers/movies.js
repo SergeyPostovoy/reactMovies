@@ -9,7 +9,9 @@ const initialState = {
 }
 
 const emptyItem = {
-    title: 'New movie'
+    title: 'New movie',
+    director: null, 
+    year:  null
 }
 
 export default (state = initialState, action) => {

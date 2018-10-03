@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import {
-    Card, CardBody, CardTitle, Button,
+    Card, CardBody, CardTitle, Button, CardHeader,
     CardSubtitle, CardText, CardFooter, ButtonGroup
 } from 'reactstrap'
 
@@ -18,20 +18,20 @@ class MovieCard extends Component {
     }
     render() {
         const item = this.props.item
+
         if (Array.isArray(item.genres)) {
-            item.genres.join(' / ')
+            item.genres = item.genres.join(' / ')
         }
 
-
         return <Card className="movie">
-            <CardBody>
+            <CardHeader>
                 <CardTitle>{item.title}
                     <div className="year">{item.year}</div>
                 </CardTitle>
                 <CardSubtitle>
                     <div className="genres">{item.genres}</div>
                 </CardSubtitle>
-            </CardBody>
+            </CardHeader>
             <div className="noimage">
                 <div className="logo" style={{ backgroundImage: `url(${item.posterUrl}` }} />
             </div>
@@ -43,9 +43,7 @@ class MovieCard extends Component {
                 <div className="runtime">{item.runtime}</div>
                 <div className="director">{item.director}</div>
                 <center><ButtonGroup size="sm">
-                    <Link to={`/edit/${item.id}`}>
-                        <Button className="edit" color="primary">Open</Button>
-                    </Link>
+                    <Link className="remove btn btn-primary" to={`/edit/${item.id}`}>Open</Link>
                     <Button className="remove" color="danger" onClick={() => this.props.removeMovie(item)}>Remove</Button>
                 </ButtonGroup>
                 </center>

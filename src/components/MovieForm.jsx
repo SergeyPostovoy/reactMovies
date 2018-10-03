@@ -9,16 +9,12 @@ import {
 } from 'reactstrap'
 
 class MovieForm extends Component {
-    eventChangeHandler(e) {
-
-    }
-
     getTitle() {
         let item = this.props.item
         let title = item.id ? [item.title, item.director, item.year].join(", ") : "New movie item",
             mode = item.id ? 'edit' : 'adding'
 
-        return (<span>{title} <span className="mode">{mode}</span></span>)
+        return <span>{title} <span className="mode">{mode}</span></span>
     }
 
     render() {

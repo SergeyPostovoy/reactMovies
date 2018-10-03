@@ -1,4 +1,3 @@
-
 export const addMovie = (movie) => {
     return {
         type: "MOVIE_ADD",

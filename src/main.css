@@ -55,6 +55,15 @@ body {
 .movie .card-title {
     font-size: 120%;
     font-weight: bold;
+    position: relative;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.card-subtitle {
+    position: absolute;
+    top: 64px;
+    right: 10px;
 }
 
 .movie .genres {
@@ -74,6 +83,9 @@ body {
     color: #888;
     clear: both;
     font-style: italic;
+    padding: 5px 10px;
+    height: 170px;
+    overflow: hidden;
 }
 
 .movie .actors::before {
@@ -115,6 +127,7 @@ body {
     text-align: right;
     width: 50%;
     font-size: 90%;
+    height: 40px;
     margin-bottom: 7px;
 }
 
@@ -134,6 +147,13 @@ body {
     color: #955;
     letter-spacing: 1px;
     clear: both;
+    position: absolute;
+    right: -11px;
+    top: -8px;
+}
+
+.movie .card-header {
+    height: 80px;
 }
 
 .movie .card-footer .btn-group {
@@ -157,10 +177,12 @@ body {
 }
 
 .updateDialog {
-    background: #f5Ffff;
-    box-shadow: 0 0 160px -10px #bbb;
+    margin-top: -80px;
+    margin-bottom: -50px;
+    margin-right: -80px;
+    background: #eee;
     overflow: hidden;
-    padding: 30px 20px;
+    padding: 40px 29px;
 }
 
 .cinemaRedactGroup {
@@ -197,4 +219,74 @@ body {
 .updateDialog .cancel {
     width: 28%;
     margin: 10px 2.5%;
+}
+
+.layout.container {
+    left: 0;
+    top: 0;
+    height: 90%;
+    overflow-y: scroll;
+    position: fixed;
+    width: 90%;
+    margin: 3%;
+    padding: 50px 30px 0 0;
+}
+
+.movie.card .btn {
+    width: 80px;
+}
+
+.logo.col-sm-12.col-md-6:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url(/static/media/noimage.a3952d0b.png);
+    opacity: 0.15;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    z-index: 0;
+}
+
+div#root {
+    background: #aaa;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+.updateDialog {
+    opacity: 1;
+    animation: dialogGrow 1.8s ease;
+}
+
+@keyframes dialogGrow {
+    0% {
+        opacity: 0;
+        transform: scaleX(0.01) scaleY(0.1);
+    }
+    40% {
+        filter: brightness(0.01);
+        opacity: .2;
+        transform: scaleX(0.01) scaleY(1);
+    }
+    60% {
+        opacity: .1;
+        filter: brightness(1);
+    }
+    70% {
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+    80% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+    }
 }
